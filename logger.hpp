@@ -19,7 +19,9 @@ public:
 		ERROR_LEVEL
 	};
 	static void log(log_level, const char* source, const std::string& message);
+	static void log(log_level, const char* source, const std::wstring& message);
 	static void log(const char* source, const std::string& message);
+	static void log(const char* source, const std::wstring& message);
 	static void simple_out(const std::string& message);
 private:
 	static std::array<std::string, sizeof(log_level)+1u> level_string;
